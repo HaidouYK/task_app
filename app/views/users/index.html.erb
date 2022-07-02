@@ -1,0 +1,55 @@
+<div class="main_container">
+    <div class="information">
+        <h2>スケジュール一覧</h2>
+    </div>
+
+    <% if flash[:notice] %>
+        <p class="notice notice__success"><%= flash[:notice] %></p>
+    <% end %>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>タイトル</th>
+                <th>開始日</th>
+                <th>終了日</th>
+                <th>終日</th>
+                <th>スケジュール更新日時</th>
+                <th>確認</th>
+                <th>編集</th>
+                <th>削除</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% if @schedules.blank? %>
+                <tr>
+                    <td colspan="9">現在登録しているスケジュールはありません</td>
+                </tr>
+            <% else %>
+                <% @schedules.each do |schedule| %>
+                    <tr>
+                        <td><%= schedule.id %></td>
+                        <td><%= schedule.title %></td>
+                        <td><%= schedule.start_date.to_s(:date_jp) %></td>
+                        <td><%= schedule.end_date.to_s(:date_jp) %></td>
+                        <td>
+                            <% if schedule.all_day == true %>
+                               ○
+                            <% else %>
+
+                            <% end %>
+                        </td>
+                        <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
+                        <td><%= link_to "確認", user_path(schedule) %></td>
+                        <td><%= link_to "編集", edit_user_path(schedule) %></td>
+                        <td><%= link_to "削除", user_path(schedule), method: :delete, data: {confirm: "本当に削除しますか？"} %></td>
+                    </tr>
+                <% end %>
+            <% end %>
+        </tbody>
+    </table>
+
+    <p><%= link_to "スケジュール新規登録",:new_user %></p>
+</div>

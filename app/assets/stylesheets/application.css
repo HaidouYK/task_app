@@ -13,3 +13,155 @@
  *= require_tree .
  *= require_self
  */
+
+ body{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+ }
+
+ header,footer{
+    width: 100%;
+    padding: 10px;
+    background: #c52f24;
+    color: #fff;
+    margin: 0px;
+ }
+
+ footer{
+    position: absolute;
+    bottom: 0px;
+ }
+
+ h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+ }
+
+ .main_container{
+    margin: 50px 15px;
+ }
+
+ h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+ }
+
+ table{
+    border-collapse: collapse;
+ }
+
+ thead{
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+ }
+
+ tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+ }
+
+ table th,table td{
+    border: solid 1px black;
+    padding: 10px 20px;
+ }
+
+ table th{
+    background-color: #ffdfdf;
+ }
+
+ tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+ }
+
+ table td{
+    background-color: #f1c8c861;
+    text-align: center;
+ }
+
+ strong{
+    font-weight: bold;
+ }
+
+ a{
+    text-decoration: none;
+ }
+
+ h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 00.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+ }
+
+ form{
+    display: block;
+    margin-top: 0em;
+ }
+
+ input,pre{
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+ }
+
+ label{
+    cursor: default;
+ }
+
+ .schedules-content{
+    width: 350px;
+    height: 200px;
+    font-size: 16px;
+ }
+
+ ul,li{
+    list-style: none;
+    padding-left: 0px;
+ }
+
+ input[type=submit]{
+    width: auto;
+ }
+
+ .notice{
+    padding: 15px;
+    width: 400px;
+    text-align: center;
+ }
+
+ .notice__success{
+    background-color: #98ecaa7a;
+    border: 2px solid #5cd075;
+ }
+
+ .error{
+   padding: 15px;
+   width: 400px;
+   text-align: center;
+ }
+
+ .error__failure{
+   background-color: #ec98ac8f;
+   border: 2px solid #ec7592;
+ }
